@@ -804,6 +804,7 @@ do
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
     -- You can add other tools here that you want Mason to install
+    'yaml-language-server'
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -1034,6 +1035,6 @@ do
   -- require 'custom.plugins.ui'
   -- require 'custom.plugins.git'
 end
-
+require('custom.comforts')
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
