@@ -863,6 +863,7 @@ do
   -- NOTE: You can also specify plugin using a version range for its git tag.
   --  See `:help vim.version.range()` for more info
   vim.pack.add { { src = gh 'L3MON4D3/LuaSnip', version = vim.version.range '2.*' } }
+  vim.pack.add { { src = gh 'L3MON4D3/LuaSnip', version = vim.version.range '2.*' } }
   require('luasnip').setup {}
 
   -- `friendly-snippets` contains a variety of premade snippets.
@@ -955,7 +956,6 @@ do
   ---@param buf integer
   ---@param language string
   local function treesitter_try_attach(buf, language)
-    -- Check if the buffer is valid (might not be after install completes)
     if not vim.api.nvim_buf_is_valid(buf) then return end
 
     -- Check if a parser exists and load it
@@ -1036,5 +1036,7 @@ do
   -- require 'custom.plugins.git'
 end
 require('custom.comforts')
+require('custom.autosave')
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
