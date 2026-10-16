@@ -9,7 +9,7 @@ A starting point for Neovim that is:
 * Completely Documented
 
 **NOT** a Neovim distribution, but instead a starting point for your configuration.
-
+test
 ## Installation
 
 ### Install Neovim
